@@ -13,12 +13,9 @@ jobs:
       - uses: actions/checkout@v2
         with:
           path: ./
-      - name: run ls
-        run: |
-          ls
       -
         name: Test Kubecost Pkg
         run: |
-          cd opencost/pkg/kubecost && bingen-validate
+          cd pkg/kubecost && bingen-validate
 
   
