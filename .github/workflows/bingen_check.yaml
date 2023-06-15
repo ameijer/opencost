@@ -1,0 +1,23 @@
+name: Develop PR - check bingen compliance
+
+on:
+  pull_request:
+    branches:
+      - develop
+
+jobs:
+  backend:
+    runs-on: ameijer12/opencost:bingen1
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          path: ./
+      - name: run ls
+        run: |
+          ls
+      -
+        name: Test Kubecost Pkg
+        run: |
+          cd opencost/pkg/kubecost && bingen-validate
+
+  
