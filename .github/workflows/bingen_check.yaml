@@ -8,7 +8,7 @@ on:
 jobs:
   codecs:
     runs-on: ubuntu-latest
-    container: ameijer12/opencost:bingen2-amd64
+    container: ameijer12/opencost:bingen3-amd64
     steps:
       - uses: actions/checkout@v2
         with:
