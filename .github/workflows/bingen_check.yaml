@@ -1,0 +1,21 @@
+name: Develop PR - check bingen compliance
+
+on:
+  pull_request:
+    branches:
+      - develop
+
+jobs:
+  codecs:
+    runs-on: ubuntu-latest
+    container: ameijer12/opencost:bingen7-amd64
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          path: ./
+      -
+        name: Test Kubecost Pkg
+        run: |
+          cd pkg/kubecost && bingen-validate
+
+  

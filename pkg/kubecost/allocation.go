@@ -84,6 +84,7 @@ type Allocation struct {
 	RAMCostAdjustment          float64               `json:"ramCostAdjustment"`
 	SharedCost                 float64               `json:"sharedCost"`
 	ExternalCost               float64               `json:"externalCost"`
+	Test                       string                `json:"test"`
 	// RawAllocationOnly is a pointer so if it is not present it will be
 	// marshalled as null rather than as an object with Go default values.
 	RawAllocationOnly *RawAllocationOnlyData `json:"rawAllocationOnly"`
